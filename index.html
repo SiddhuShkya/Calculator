@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      /* Custom styles for the calculator */
+      body {
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .calculator-card {
+        max-width: 400px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+      .calculator-card-header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+      }
+      .calculator-card-body {
+        padding: 20px;
+      }
+
+      table {
+        margin: 20px auto;
+        border-collapse: collapse;
+      }
+
+      td {
+        padding: 10px;
+      }
+
+      button {
+        font-size: 24px;
+        width: 60px;
+        height: 60px;
+        border: none;
+        background-color: #e0e0e0;
+        color: #333;
+        cursor: pointer;
+      }
+
+      input {
+        font-size: 24px;
+        height: 60px;
+        text-align: right;
+        padding: 10px;
+        border: none;
+        background-color: #fff;
+        color: #333;
+        outline: none;
+      }
+
+      button.operator {
+        background-color: #ff9800;
+        color: #fff;
+      }
+
+      button.clear {
+        background-color: #f44336;
+        color: #fff;
+      }
+
+      #output {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        color: #888;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="calculator-card">
+      <div class="calculator-card-header">
+        <h5 class="text-center">Calculator</h5>
+      </div>
+      <div class="calculator-card-body">
+        <table>
+          <tr>
+            <td colspan="5"><input id="display" name="display" disabled /></td>
+          </tr>
+
+          <tr>
+            <td><button id="button1" value="1">1</button></td>
+            <td><button id="button2" value="2">2</button></td>
+            <td><button id="button3" value="3">3</button></td>
+            <td><button id="addButton">+</button></td>
+          </tr>
+          <tr>
+            <td><button id="button4" value="4">4</button></td>
+            <td><button id="button5" value="5">5</button></td>
+            <td><button id="button6" value="6">6</button></td>
+            <td><button id="subtractButton">-</button></td>
+          </tr>
+          <tr>
+            <td><button id="button7" value="7">7</button></td>
+            <td><button id="button8" value="8">8</button></td>
+            <td><button id="button9" value="9">9</button></td>
+            <td><button id="multiplyButton">*</button></td>
+          </tr>
+
+          <tr>
+            <td><button id="clearButton">C</button></td>
+            <td><button id="button0" value="0">0</button></td>
+            <td><button id="equalsButton">=</button></td>
+            <td><button id="divideButton">&#247;</button></td>
+          </tr>
+        </table>
+
+        <span id="output">
+          <!-- Use this span for writing debug messages or anything else you think will help! -->
+        </span>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
